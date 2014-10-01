@@ -1,0 +1,15 @@
+﻿.greyBox{
+    background-color:grey;
+    color:black;
+    font-weight:bold;
+    width:30px;
+    padding:5px;
+}
+
+.redBox{
+    background-color:red;
+    color:white;
+    font-weight:bold;
+    width:30px;
+    padding:5px;
+}

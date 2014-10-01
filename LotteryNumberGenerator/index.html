@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>Lottery Number Generator</title>
+    <link rel="stylesheet" href="Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="Content/app.css" />
+</head>
+<body ng-app="lotteryApp">
+    <div class="container">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <h1>Lottery Number Generator</h1>
+            </div>
+        </div>
+        <div ng-controller="lotteryCtrl" style="padding-left:20px; padding-right:20px">
+            <div>
+                <input type="text" ng-repeat="number in numbers track by $index" class="{{class}}" readonly="readonly" value={{number}} />
+            </div>
+            <input type="button" value="Generate" ng-click='generateNumber();'>
+            <input type="button" value="Save" ng-click='saveNumber();' >
+            <h3>Counter: {{numberInDraw}}</h3>
+        </div>
+    </div>
+    <script src="Scripts/jquery-2.1.1.min.js"></script>
+    
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-resource.min.js"></script>
+    <script src="Scripts/angular-route.min.js"></script>
+    <script src="Scripts/app/app.js"></script>
+    <script src="Scripts/app/service.js"></script>
+    <script src="Scripts/app/controller.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+</body>
+</html>
