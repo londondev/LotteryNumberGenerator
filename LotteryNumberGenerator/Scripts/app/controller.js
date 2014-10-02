@@ -3,11 +3,13 @@
 lotteryApp.controller('lotteryCtrl', ['$scope','dataServiceFac', function ($scope,dataServiceFac) {
     
     $scope.numberInDraw = 0;
+    
     $scope.generateNumber = function () {
-        dataServiceFac.numbers().then(function (data) {
+            dataServiceFac.numbers().then(function (data) {
             $scope.numbers = data;
             $scope.class = "redBox";
         });
+        
     };
 
    

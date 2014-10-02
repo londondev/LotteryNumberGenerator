@@ -1,17 +1,5 @@
 ﻿'use strict'
 
-lotteryApp.service('dataService', ['$http',function ($http) {
-    this.getNumbers = function () {
-        $http({
-            method: "GET",
-            url: "numbers"
-        }).success(function (data) {
-            return data;
-        });
-        
-    };
-}])
-
 lotteryApp.factory('dataServiceFac', function ($http) {
     var dataServiceFac = {
         numbers: function () {
